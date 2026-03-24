@@ -14,7 +14,7 @@ function AuthContextProvider({ children }) {
     setAuthToken(token);
   }
 
-  function logOut() {
+  function logout() {
     setAuthToken(null);
   }
 
@@ -22,7 +22,7 @@ function AuthContextProvider({ children }) {
     token: authToken,
     isAuthenticated: !!authToken,
     authenticate: authenticate,
-    logOut: logOut,
+    logout: logout,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
